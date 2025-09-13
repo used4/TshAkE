@@ -1,0 +1,235 @@
+.class public Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote$b;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->K()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field public final a:Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote;
+
+.field public final b:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+
+# direct methods
+.method public constructor <init>(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote;)V
+    .registers 3
+
+    iput-object p1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->b:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    iput-object p2, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->a:Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/String;)V
+    .registers 4
+
+    :try_start_0
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->b:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->F(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;Z)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Error: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_end_13
+    .catchall {:try_start_0 .. :try_end_13} :catchall_19
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->a:Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote;
+
+    invoke-virtual {v0}, Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote;->g()V
+
+    return-void
+
+    :catchall_19
+    move-exception v0
+
+    iget-object v1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->a:Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote;
+
+    invoke-virtual {v1}, Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote;->g()V
+
+    throw v0
+.end method
+
+.method public b(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
+    .registers 11
+
+    :try_start_0
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->b:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->F(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;Z)V
+
+    invoke-virtual {p4}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3c
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->b:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->E(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    sget-object v1, Lvl;->N0:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3c
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->b:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->A(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0, v1, p4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->b:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->A(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    sget-object v1, Lvl;->O0:Ljava/lang/String;
+
+    invoke-interface {v0, v1, p5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    :cond_3c
+    invoke-virtual {p7}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_63
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->b:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->E(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    sget-object v1, Lvl;->K0:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_63
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->b:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->A(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0, v1, p7}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    :cond_63
+    invoke-virtual {p3}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_8a
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->b:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->E(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    sget-object v1, Lvl;->M0:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8a
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->b:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->A(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0, v1, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+    :try_end_8a
+    .catchall {:try_start_0 .. :try_end_8a} :catchall_90
+
+    :cond_8a
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->a:Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote;
+
+    invoke-virtual {v0}, Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote;->g()V
+
+    return-void
+
+    :catchall_90
+    move-exception v0
+
+    iget-object v1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$c;->a:Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote;
+
+    invoke-virtual {v1}, Lapp/fixbuild/vpncore/noorvipvpn/utils/CheckAppRemote;->g()V
+
+    throw v0
+.end method

@@ -1,0 +1,344 @@
+.class public Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ld4$a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->J()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field public final a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+
+# direct methods
+.method public constructor <init>(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)V
+    .registers 2
+
+    iput-object p1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/String;)V
+    .registers 4
+
+    :try_start_0
+    const-string v0, "Network Error"
+
+    const-string v1, "Please check your internet connection and try again"
+
+    invoke-static {v0, v1}, Lqr;->k(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_7
+    .catchall {:try_start_0 .. :try_end_7} :catchall_16
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->G(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)V
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->z(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Ld4;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld4;->l()V
+
+    return-void
+
+    :catchall_16
+    move-exception v0
+
+    iget-object v1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v1}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->G(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)V
+
+    iget-object v1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v1}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->z(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Ld4;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld4;->l()V
+
+    throw v0
+.end method
+
+.method public b(Ljava/lang/String;Ljava/lang/String;)V
+    .registers 7
+
+    :try_start_0
+    invoke-static {p1}, LQ2;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "none"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_19
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->D(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)LA5;
+
+    move-result-object v0
+
+    invoke-static {p1}, LQ2;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, LA5;->N0(Ljava/lang/String;)V
+
+    :cond_19
+    invoke-static {p1}, LQ2;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "none"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2d
+
+    const-string v0, "true"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6a
+
+    :cond_2d
+    const-string v0, "Authentication Confirmed"
+
+    const-string v1, "Your authentication was successful."
+
+    invoke-static {v0, v1}, Lqr;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->D(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)LA5;
+
+    move-result-object v0
+
+    invoke-static {p1}, LQ2;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, LA5;->N0(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->A(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    sget-object v1, Lvl;->F:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->A(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->I(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)V
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    new-instance v1, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b$a;
+
+    invoke-direct {v1, p0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b$a;-><init>(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;)V
+
+    const-wide/16 v2, 0xbb8
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    :try_end_6a
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_6a} :catch_79
+    .catchall {:try_start_0 .. :try_end_6a} :catchall_80
+
+    :cond_6a
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->G(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)V
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->z(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Ld4;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld4;->l()V
+
+    return-void
+
+    :catch_79
+    move-exception v0
+
+    :try_start_7a
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_80
+    .catchall {:try_start_7a .. :try_end_80} :catchall_80
+
+    :catchall_80
+    move-exception v0
+
+    iget-object v1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v1}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->G(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)V
+
+    iget-object v1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v1}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->z(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Ld4;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld4;->l()V
+
+    throw v0
+.end method
+
+.method public c()V
+    .registers 3
+
+    :try_start_0
+    const-string v0, "Multiple Device Detected"
+
+    const-string v1, "This account is using on another device"
+
+    invoke-static {v0, v1}, Lqr;->k(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_7} :catch_16
+    .catchall {:try_start_0 .. :try_end_7} :catchall_1d
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->G(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)V
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->z(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Ld4;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld4;->l()V
+
+    return-void
+
+    :catch_16
+    move-exception v0
+
+    :try_start_17
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_1d
+    .catchall {:try_start_17 .. :try_end_1d} :catchall_1d
+
+    :catchall_1d
+    move-exception v0
+
+    iget-object v1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v1}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->G(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)V
+
+    iget-object v1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v1}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->z(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Ld4;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld4;->l()V
+
+    throw v0
+.end method
+
+.method public d()V
+    .registers 3
+
+    :try_start_0
+    const-string v0, "Wrong Account"
+
+    const-string v1, "Authentication failed, check your username and password"
+
+    invoke-static {v0, v1}, Lqr;->k(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_7} :catch_16
+    .catchall {:try_start_0 .. :try_end_7} :catchall_1d
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->G(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)V
+
+    iget-object v0, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v0}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->z(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Ld4;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld4;->l()V
+
+    return-void
+
+    :catch_16
+    move-exception v0
+
+    :try_start_17
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_1d
+    .catchall {:try_start_17 .. :try_end_1d} :catchall_1d
+
+    :catchall_1d
+    move-exception v0
+
+    iget-object v1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v1}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->G(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)V
+
+    iget-object v1, p0, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity$b;->a:Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;
+
+    invoke-static {v1}, Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;->z(Lapp/fixbuild/vpncore/noorvipvpn/activities/LoginActivity;)Ld4;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld4;->l()V
+
+    throw v0
+.end method
