@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "title": "تحديث مهم",
+  "message": "اضغط موافق لفتح الرابط.",
+  "button_text": "موافق",
+  "url": "https://t.me/hiiq3",
+  "force": true,
+  "max_shows": 3,
+  "reset_days": 0
+}
