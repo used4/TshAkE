@@ -7,6 +7,7 @@ canvas.height = window.innerHeight;
 const particles = [];
 const particleCount = 80;
 
+
 for(let i=0;i<particleCount;i++){
   particles.push({
     x: Math.random()*canvas.width,
